@@ -4,8 +4,7 @@ var drawMode = false;
 var things = []; //array for the objects (cars and ball)
 var field = 1; //variable to define the grid template over the field
 var help = true; //variable that display instructions on screen
-
-let z_counter = 0;
+var z_counter = 1;
 
 //Class for the objects (cars and ball) used within the drawboard.
 class Thing {
@@ -27,6 +26,7 @@ class Thing {
         pop();
     }
 }
+
 
 //function that loads all images in the app
 function preload() {
@@ -106,9 +106,6 @@ function draw() {
     image(rotateKeys, 75, windowHeight / 2 + 140);
     image(imgFieldKeys, 75, windowHeight / 2 + 310);
     image(title, 75, 60);
-    fill(50);
-    textSize(10);
-    text("created by s0nera • v0.2.1", 15, windowHeight - 20);
     image(pg, windowWidth / 2, windowHeight / 2);
     for (var i = 0; i < things.length; i++) {
         things[i].display();
